@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>海角原创56会喷水-创作手记与作品索引</title>
+<meta name="description" content="海角原创56会喷水相关创作手记与作品索引，整理创作者发布的系列条目、版本差异、观看体验要点与观众反馈，按更新日期与分类编排，附常见问题与相关推荐。">
+<meta name="keywords" content="海角原创56会喷水">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3d5c'/%3E%3Cpath d='M12 40c8-16 16-16 20 0 4-16 12-16 20 0' fill='none' stroke='%234fd1c5' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='16' r='5' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#16212b;
+  --ink-soft:#4a5a68;
+  --brand:#0f3d5c;
+  --brand-deep:#092a42;
+  --accent:#d9603f;
+  --accent-soft:#f7e3db;
+  --teal:#1f8a86;
+  --teal-soft:#e2f2f1;
+  --paper:#fbf8f3;
+  --card:#ffffff;
+  --line:#dfd8cc;
+  --line-soft:#ece6da;
+  --gold:#c99a2e;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 10px 26px rgba(15,61,92,.10);
+  --shadow-sm:0 3px 10px rgba(15,61,92,.08);
+  --space-1:6px;--space-2:12px;--space-3:18px;--space-4:26px;--space-5:38px;--space-6:54px;
+  --font: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --sticky-h:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand);text-decoration:none}
+a:hover{color:var(--accent)}
+img{display:block;max-width:100%}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 var(--space-2)}
+h2{font-size:1.5rem;letter-spacing:.02em}
+h3{font-size:1.12rem}
+p{margin:0 0 var(--space-2)}
+:target{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+section[id],article[id],div[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+.wrap{width:min(1180px,100% - 2.4rem);margin-inline:auto}
+
+/* ---------- 吸顶公告条 ---------- */
+.announce{
+  background:linear-gradient(90deg,var(--brand-deep),var(--brand));
+  color:#e8f1f5;font-size:.83rem;
+}
+.announce .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding:7px 0}
+.announce b{color:#ffd166;font-weight:600}
+.announce a{color:#bce7e3;white-space:nowrap;border-bottom:1px dotted #7fc4c0;padding-bottom:1px}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:6px}
+
+/* ---------- 吸顶页头 ---------- */
+.header{position:sticky;top:0;z-index:90;background:rgba(251,248,243,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-inner{display:flex;align-items:center;gap:var(--space-4);padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{width:42px;height:42px}
+.brand-text{font-weight:700;font-size:1.06rem;color:var(--brand-deep);letter-spacing:.02em;line-height:1.2}
+.brand-text small{display:block;font-size:.68rem;font-weight:400;color:var(--ink-soft);letter-spacing:.14em}
+.main-nav ul{display:flex;gap:var(--space-3);list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.main-nav a{font-size:.92rem;color:var(--ink-soft);padding:4px 2px;border-bottom:2px solid transparent}
+.main-nav a:hover,.main-nav a:focus-visible{border-bottom-color:var(--accent);color:var(--brand-deep)}
+.head-tools{margin-left:auto;display:flex;align-items:center;gap:10px}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:186px;padding:8px 12px 8px 32px;border:1px solid var(--line);border-radius:999px;
+  background:#fff;font-family:var(--font);font-size:.86rem;color:var(--ink);
+}
+.search-box input:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+.search-box svg{position:absolute;left:10px;width:15px;height:15px;fill:var(--ink-soft);pointer-events:none}
+.search-feedback{font-size:.76rem;color:var(--accent);position:absolute;top:calc(100% + 4px);left:0;background:#fff;padding:2px 8px;border-radius:6px;box-shadow:var(--shadow-sm);display:none;white-space:nowrap}
+.btn-menu{display:none;background:var(--brand);color:#fff;border:0;border-radius:8px;padding:8px 12px;font-family:var(--font);font-size:.86rem;cursor:pointer}
+.btn-menu:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* ---------- 首屏 ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 380px at 88% -10%,rgba(31,138,134,.16),transparent 70%),
+  radial-gradient(700px 340px at 6% 110%,rgba(217,96,63,.12),transparent 70%),
+  var(--paper);
+  border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-5);align-items:center;padding:var(--space-6) 0}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;letter-spacing:.16em;color:var(--teal);text-transform:uppercase;font-weight:600;margin-bottom:var(--space-2)}
+.hero-kicker::before{content:"";width:26px;height:2px;background:var(--accent)}
+.hero h1{font-size:clamp(1.8rem,4vw,2.7rem);color:var(--brand-deep);letter-spacing:.01em;margin-bottom:var(--space-2)}
+.hero-lead{font-size:1.02rem;color:var(--ink-soft);max-width:40ch;margin-bottom:var(--space-3)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:var(--space-4)}
+.btn{display:inline-block;padding:10px 22px;border-radius:999px;font-size:.92rem;font-weight:600;border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{background:var(--brand-deep);color:#fff;transform:translateY(-2px)}
+.btn-ghost{border-color:var(--brand);color:var(--brand)}
+.btn-ghost:hover{background:var(--brand);color:#fff;transform:translateY(-2px)}
+.hero-stats{display:flex;gap:var(--space-4);flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:var(--space-3)}
+.hero-stats div{min-width:96px}
+.hero-stats strong{display:block;font-size:1.4rem;color:var(--accent);line-height:1.2}
+.hero-stats span{font-size:.8rem;color:var(--ink-soft)}
+.hero-art{position:relative;min-height:300px}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 14px 30px rgba(15,61,92,.16))}
+.hero-note{position:absolute;right:0;bottom:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:8px 12px;font-size:.76rem;color:var(--ink-soft);box-shadow:var(--shadow-sm)}
+
+/* ---------- 布局 ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 296px;gap:var(--space-5);padding:var(--space-5) 0 var(--space-6)}
+.main-col{min-width:0}
+.side-col{min-width:0}
+.panel{background:var(--card);border:1px solid var(--line-soft);border-radius:var(--radius);padding:var(--space-4);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm)}
+.panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:var(--space-3)}
+.panel-head h2{margin:0}
+.panel-head .more{font-size:.8rem;color:var(--ink-soft);border-bottom:1px dotted var(--line)}
+.section-lead{color:var(--ink-soft);font-size:.93rem;margin:-6px 0 var(--space-3)}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3)}
+.ov-card{background:linear-gradient(180deg,#fff,#fbf8f3);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:14px}
+.ov-card h3{font-size:.98rem;margin-bottom:6px;color:var(--brand-deep)}
+.ov-card p{font-size:.85rem;color:var(--ink-soft);margin:0}
+.ov-card .num{font-size:1.3rem;color:var(--teal);font-weight:700;display:block;margin-bottom:2px}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3)}
+.card{background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card img{width:100%;height:150px;object-fit:cover}
+.card-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body h3{font-size:1rem;margin:0}
+.card-meta{font-size:.76rem;color:var(--ink-soft);display:flex;gap:10px;flex-wrap:wrap}
+.tag{display:inline-block;font-size:.72rem;padding:2px 9px;border-radius:999px;background:var(--teal-soft);color:#0e5f5c}
+.tag--accent{background:var(--accent-soft);color:#a13d22}
+.tag--gold{background:#f7efd8;color:#8a6316}
+.card-body p{font-size:.85rem;color:var(--ink-soft);margin:0}
+
+/* 最新更新列表 */
+.update-list{list-style:none;margin:0;padding:0}
+.update-list li{display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--line-soft);font-size:.9rem}
+.update-list li:last-child{border-bottom:0}
+.update-list time{color:var(--teal);font-size:.8rem;font-variant-numeric:tabular-nums}
+.update-list .ver{font-size:.75rem;color:var(--ink-soft);white-space:nowrap}
+.update-list a{font-weight:600}
+
+/* 分类索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px}
+.cat-index a{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;background:#fff;color:var(--ink-soft)}
+.cat-index a:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-soft)}
+.cat-index b{color:var(--accent);font-weight:600}
+
+/* 深度解析 */
+.analysis h2{margin-bottom:var(--space-3)}
+.analysis h3{color:var(--brand-deep);margin-top:var(--space-4);padding-left:12px;border-left:4px solid var(--accent)}
+.analysis p{font-size:.95rem}
+.pull-quote{background:var(--teal-soft);border-left:5px solid var(--teal);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 20px;margin:var(--space-3) 0;font-size:.95rem;color:#0d4f4c}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin:var(--space-3) 0;font-size:.87rem}
+.compare > div{padding:12px 16px}
+.compare .ch{background:var(--brand);color:#fff;font-weight:600}
+.compare .l{background:#f3f6f8;color:var(--ink-soft);font-weight:600;border-right:1px solid var(--line)}
+.compare .a{background:#fff}
+.fact-check{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:8px}
+.fact-check li{display:grid;grid-template-columns:84px 1fr;gap:10px;font-size:.88rem;padding:10px 12px;background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius-sm)}
+.fact-check b{color:var(--teal);font-weight:600}
+
+/* 体验指南步骤 */
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:var(--space-3)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.steps li::before{content:counter(s,decimal-leading-zero);font-weight:700;color:#fff;background:var(--accent);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:.82rem}
+.steps h3{font-size:.98rem;margin:0 0 4px}
+.steps p{font-size:.87rem;color:var(--ink-soft);margin:0}
+
+/* FAQ */
+details{border:1px solid var(--line-soft);border-radius:var(--radius-sm);background:#fff;margin-bottom:10px}
+details[open]{box-shadow:var(--shadow-sm)}
+summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.93rem;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-weight:700;font-size:1.1rem}
+details[open] summary::after{content:"−"}
+details p{padding:0 16px 14px;font-size:.88rem;color:var(--ink-soft);margin:0}
+
+/* 评论 */
+.comment{background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:13px 16px;margin-bottom:10px}
+.comment-head{display:flex;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--ink-soft);margin-bottom:5px}
+.comment-head b{color:var(--brand-deep);font-size:.87rem}
+.comment p{font-size:.88rem;margin:0}
+.comment .rate{color:var(--gold);font-size:.8rem;letter-spacing:1px}
+.comment.neutral{border-left:3px solid var(--line)}
+.comment.crit{border-left:3px solid var(--accent)}
+
+/* 资讯 */
+.news-list{list-style:none;margin:0;padding:0}
+.news-list li{padding:11px 0;border-bottom:1px dashed var(--line-soft);font-size:.89rem}
+.news-list li:last-child{border-bottom:0}
+.news-list .src{color:var(--teal);font-size:.78rem;margin-left:8px}
+.news-list p{font-size:.82rem;color:var(--ink-soft);margin:3px 0 0}
+
+/* 推荐标签 */
+.reco{display:flex;flex-wrap:wrap;gap:9px}
+.reco a{font-size:.84rem;padding:6px 13px;border-radius:6px;background:#fff;border:1px solid var(--line);color:var(--ink-soft)}
+.reco a:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* 榜单 / 时间线 */
+.rank{list-style:none;margin:0;padding:0;counter-reset:r}
+.rank li{counter-increment:r;display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line-soft);font-size:.89rem}
+.rank li::before{content:counter(r);width:26px;height:26px;border-radius:7px;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:.78rem;font-weight:700}
+.rank li:nth-child(1)::before{background:var(--accent)}
+.rank li:nth-child(2)::before{background:var(--gold)}
+.rank .score{color:var(--ink-soft);font-size:.78rem;font-variant-numeric:tabular-nums}
+.timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line);display:grid;gap:14px}
+.timeline li{position:relative;font-size:.87rem}
+.timeline li::before{content:"";position:absolute;left:-25px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--teal);border:2px solid var(--paper)}
+.timeline time{display:block;font-size:.76rem;color:var(--accent);font-weight:600}
+
+/* 侧栏 */
+.side-card{background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);padding:var(--space-3);margin-bottom:var(--space-3);box-shadow:var(--shadow-sm)}
+.side-card h3{font-size:.95rem;margin-bottom:10px;color:var(--brand-deep);padding-bottom:8px;border-bottom:2px solid var(--teal-soft)}
+.side-nav ul{list-style:none;margin:0;padding:0}
+.side-nav a{display:block;padding:7px 10px;border-radius:7px;font-size:.86rem;color:var(--ink-soft);border-left:3px solid transparent}
+.side-nav a.active{background:var(--teal-soft);color:#0e5f5c;border-left-color:var(--teal);font-weight:600}
+.side-nav a:hover{background:#f4f1ea;color:var(--brand-deep)}
+.mini-item{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line-soft);font-size:.84rem}
+.mini-item:last-child{border-bottom:0}
+.mini-item .k{color:var(--accent);font-weight:700;flex-shrink:0}
+.mini-item a{color:var(--ink)}
+.mini-item a:hover{color:var(--teal)}
+
+/* 页尾 */
+.footer{background:var(--brand-deep);color:#c9d8e1;padding:var(--space-5) 0 var(--space-3);font-size:.86rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-4);margin-bottom:var(--space-4)}
+.footer h4{color:#fff;font-size:.92rem;margin-bottom:12px}
+.footer a{color:#a9c4d2;display:block;padding:3px 0;font-size:.84rem}
+.footer a:hover{color:#ffd166}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand svg{width:36px;height:36px}
+.foot-brand span{color:#fff;font-weight:700;font-size:1rem}
+.footer p{color:#93aebd;font-size:.82rem;line-height:1.7}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:var(--space-3);display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:.78rem;color:#7f9aab}
+
+/* 回到顶部 */
+.to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;border:0;display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;box-shadow:var(--shadow);z-index:80;font-size:1.1rem}
+.to-top.show{opacity:1;visibility:visible}
+.to-top:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* 平板 */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  .side-col{order:2}
+  .main-col{order:1}
+  .hero .wrap{grid-template-columns:1fr;gap:var(--space-4)}
+  .hero-art{min-height:0;max-width:460px}
+  .head-inner{flex-wrap:wrap;gap:10px}
+  .btn-menu{display:inline-block}
+  .main-nav{order:3;width:100%;display:none}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:2px}
+  .head-tools{margin-left:auto}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .overview-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  :root{--sticky-h:120px}
+  .wrap{width:calc(100% - 1.6rem)}
+  .card-grid{grid-template-columns:1fr}
+  .overview-grid{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .l{border-right:0;border-bottom:1px solid var(--line)}
+  .update-list li{grid-template-columns:1fr;gap:2px}
+  .search-box input{width:132px}
+  .hero h1{font-size:1.72rem}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-stats{gap:var(--space-3)}
+  .to-top{right:12px;bottom:12px;width:40px;height:40px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce">
+  <div class="wrap">
+    <span><span class="dot"></span><b>海角原创</b> 频道：《会喷水》第二季条目索引于 11 月 6 日更新，新增 3 条版本记录。</span>
+    <a href="/#updates">查看更新明细 →</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="header">
+  <div class="wrap head-inner">
+    <a class="brand" href="/#top" aria-label="回到首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f3d5c"/>
+        <path d="M11 41c8-15 15-15 19 0 4-15 11-15 19 0" fill="none" stroke="#4fd1c5" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="32" cy="17" r="5" fill="#ffd166"/>
+        <path d="M17 50h30" stroke="#d9603f" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">海角原创56会喷水<small>作品索引 · 创作手记</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <ul>
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picked">精选条目</a></li>
+        <li><a href="/#updates">更新记录</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#analysis">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 105.3 14l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+        <input id="searchInput" type="search" placeholder="查找条目 / 版本 / 标签" aria-label="站内查找">
+        <span class="search-feedback" id="searchFeedback"></span>
+      </div>
+      <button class="btn-menu" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-kicker">原创系列 · 版本档案</span>
+      <h1>海角原创56会喷水</h1>
+      <p class="hero-lead">围绕创作者「海边阿策」的《会喷水》系列，按发布批次、剪辑版本与观众反馈整理条目，记录每一版改动、时长变化和可回看的细节。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#picked">浏览精选条目</a>
+        <a class="btn btn-ghost" href="/#analysis">读深度解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>56</strong><span>编号条目</span></div>
+        <div><strong>9</strong><span>分类频道</span></div>
+        <div><strong>3</strong><span>本周新增版本</span></div>
+        <div><strong>2026-11-08</strong><span>索引核对日</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img">
+        <defs>
+          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1f8a86"/><stop offset="1" stop-color="#0f3d5c"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="18" width="384" height="284" rx="20" fill="#fff" stroke="#dfd8cc"/>
+        <rect x="42" y="42" width="336" height="132" rx="12" fill="url(#sea)"/>
+        <path d="M60 132c22-30 40-30 60 0 20-30 38-30 60 0 22-30 40-30 60 0 20-30 38-30 60 0" fill="none" stroke="#4fd1c5" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="330" cy="76" r="17" fill="#ffd166"/>
+        <rect x="42" y="194" width="152" height="12" rx="6" fill="#e2f2f1"/>
+        <rect x="42" y="216" width="210" height="10" rx="5" fill="#ece6da"/>
+        <rect x="42" y="236" width="120" height="10" rx="5" fill="#ece6da"/>
+        <rect x="270" y="194" width="108" height="82" rx="10" fill="#f7e3db"/>
+        <text x="290" y="228" font-family="sans-serif" font-size="26" font-weight="700" fill="#a13d22">56</text>
+        <text x="288" y="252" font-family="sans-serif" font-size="12" fill="#a13d22">索引编号</text>
+      </svg>
+      <div class="hero-note">条目按批次归档，版本差异逐条对照</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <!-- 主内容 -->
+  <main class="main-col">
+
+    <!-- 领域概览 -->
+    <section class="panel" id="overview" aria-labelledby="overview-h">
+      <div class="panel-head">
+        <h2 id="overview-h">领域概览：这个系列在看什么</h2>
+      </div>
+      <p class="section-lead">《会喷水》是创作者海边阿策自 2025 年起的原创短片系列，编号从 01 排到 56，内容以实拍短剧、幕后花絮和版本花絮三类为主，单条时长在 42 秒到 6 分 10 秒之间。</p>
+      <div class="overview-grid">
+        <div class="ov-card">
+          <span class="num">3</span>
+          <h3>内容类型划分</h3>
+          <p>正片、后期花絮、未剪辑素材。三者常被观众混看，编号后缀 -A、-B、-C 用于区分。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">42s–6m10s</span>
+          <h3>时长跨度</h3>
+          <p>55 号最长为 6 分 10 秒，19 号最短 42 秒。时长差异主要来自片头说明与幕后段落。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">2026-10-30</span>
+          <h3>最近一次公开更新</h3>
+          <p>56 号正片上线，同日发布 56-B 剪辑说明，10 月 31 日补发幕后 3 分钟版本。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">7 / 56</span>
+          <h3>带版本差异的条目</h3>
+          <p>07、12、19、23、41、50、56 号存在两个以上版本，改点集中在片尾与配乐。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">4</span>
+          <h3>常见观看诉求</h3>
+          <p>看正片、追版本差异、找幕后、核对手法与机位。四类诉求对应不同条目，不宜混列。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">9</span>
+          <h3>频道分类数</h3>
+          <p>从「实拍短剧」到「机位拆解」共 9 个频道，频道数量稳定，未在 10 月之后新增。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精选推荐 -->
+    <section class="panel" id="picked" aria-labelledby="picked-h">
+      <div class="panel-head">
+        <h2 id="picked-h">精选内容推荐：先看这四条</h2>
+        <a class="more" href="/#channels">全部频道 →</a>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/haijiao56a/560/300" alt="56号正片片头水面镜头示意" width="560" height="300" loading="lazy">
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag--accent">正片</span><span>2026-10-30</span></div>
+            <h3>56 号正片：水花镜头的三种拍法</h3>
+            <p>片长 4 分 38 秒，前 90 秒为两组机位切换，后段是慢速回放。剪辑说明里标出了 3 处补拍。</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/haijiao56b/560/300" alt="幕后花絮拍摄现场灯位示意" width="560" height="300" loading="lazy">
+          <div class="card-body">
+            <div class="card-meta"><span class="tag">幕后</span><span>2026-10-31</span></div>
+            <h3>56-B 幕后：三盏灯的补光顺序</h3>
+            <p>3 分 02 秒的幕后记录，交代了主灯、轮廓灯与水面反光板的先后顺序，附现场录音段落。</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/haijiao50c/560/300" alt="50号两条版本并排对照画面" width="560" height="300" loading="lazy">
+          <div class="card-body">
+            <div class="card-meta"><span class="tag tag--gold">版本对照</span><span>2026-10-26</span></div>
+            <h3>50 号双版本：片尾 11 秒的差别</h3>
+            <p>50-A 与 50-B 片尾配乐不同，B 版多 11 秒黑场说明。观众对黑场的评价分成两派。</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/haijiao41d/560/300" alt="41号机位俯拍角度示意" width="560" height="300" loading="lazy">
+          <div class="card-body">
+            <div class="card-meta"><span class="tag">机位拆解</span><span>2026-10-20</span></div>
+            <h3>41 号机位拆解：俯拍与侧拍的取舍</h3>
+            <p>俯拍保留水花全貌，侧拍强化轮廓。41-C 尝试把两段剪在一起，节奏反而变慢。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="panel" id="updates" aria-labelledby="updates-h">
+      <div class="panel-head">
+        <h2 id="updates-h">最新更新：版本记录与自己核对</h2>
+      </div>
+      <ul class="update-list">
+        <li><time datetime="2026-11-06">2026-11-06</time><span><a href="/#picked">56 号索引补记</a>：新增 56-B 剪辑说明与 3 处补拍时间点</span><span class="ver">v1.2</span></li>
+        <li><time datetime="2026-11-02">2026-11-02</time><span><a href="/#picked">50 号版本对照</a>：补入片尾黑场 11 秒的逐帧说明</span><span class="ver">v1.1</span></li>
+        <li><time datetime="2026-10-31">2026-10-31</time><span>56 号幕后上线，时长 3 分 02 秒，含现场录音</span><span class="ver">新增</span></li>
+        <li><time datetime="2026-10-30">2026-10-30</time><span>56 号正片发布，片长 4 分 38 秒，两组机位</span><span class="ver">首发</span></li>
+        <li><time datetime="2026-10-27">2026-10-27</time><span><a href="/#analysis">41 号机位说明</a>：修正俯拍机位高度的记录误差</span><span class="ver">v1.0</span></li>
+        <li><time datetime="2026-10-26">2026-10-26</time><span>50-A 与 50-B 双版本索引建成，配乐差异标注</span><span class="ver">v1.0</span></li>
+      </ul>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="panel" id="channels" aria-labelledby="channels-h">
+      <div class="panel-head">
+        <h2 id="channels-h">分类入口：按内容类型检索</h2>
+      </div>
+      <p class="section-lead">频道名称按观众实际搜索词设置，条目只归入一个主频道，交叉内容在标签里另注明。</p>
+      <div class="cat-index">
+        <a href="/#picked">实拍短剧 <b>18</b></a>
+        <a href="/#picked">水下镜头花絮 <b>9</b></a>
+        <a href="/#picked">版本差异对照 <b>7</b></a>
+        <a href="/#picked">幕后灯位记录 <b>6</b></a>
+        <a href="/#picked">慢速回放片段 <b>5</b></a>
+        <a href="/#picked">片尾配乐改动 <b>4</b></a>
+        <a href="/#picked">未剪辑素材 <b>3</b></a>
+        <a href="/#picked">机位拆解 <b>3</b></a>
+        <a href="/#picked">观众反馈整理 <b>1</b></a>
+      </div>
+    </section>
+
+    <!-- 深度解析：唯一主体阅读区 -->
+    <section class="panel analysis" id="analysis" aria-labelledby="analysis-h">
+      <h2 id="analysis-h">深度解析：编号 56 真正改变的是剪辑节奏，不是画面</h2>
+      <p>围绕 56 号争论最多的说法是「画面升级」，但把 56-A 与 56-B 逐段对照后，能站住的判断更窄：改动集中在节奏与声画关系，画面本身的机位数量并没有增加。</p>
+
+      <h3>一、56-A 与 56-B 的逐段对照（可核对）</h3>
+      <p>56-A 于 10 月 30 日 20:14 发布，片长 4 分 38 秒；56-B 于 11 月 6 日更新说明页，标注「片尾调整、配乐替换」两处。把两条时间轴对齐，中段画面完全一致，差异只出现在 03:51 之后。</p>
+      <div class="compare" role="table" aria-label="56-A 与 56-B 差异对照">
+        <div class="ch">对照项</div><div class="ch">56-A / 56-B</div>
+        <div class="l">总时长</div><div class="a">4 分 38 秒 / 4 分 49 秒</div>
+        <div class="l">片尾黑场</div><div class="a">2 秒 / 13 秒</div>
+        <div class="l">配乐</div><div class="a">原声环境音 / 替换为低频铺底</div>
+        <div class="l">机位数量</div><div class="a">两组俯拍 + 一组侧拍，两版一致</div>
+        <div class="l">补拍镜头</div><div class="a">3 处，时间点 00:47、01:52、03:26</div>
+      </div>
+      <p>机位数量一致这一点，是反驳「画面升级」最直接的证据。补拍的 3 处镜头在 A 版里已经存在，B 版只是把其中 01:52 那处延长了 1.4 秒。</p>
+
+      <div class="pull-quote">编号 56 的讨论里，「喷水特效」这个说法在片中没有对应的技术记录。拍摄现场用的是实拍水花加反光板，没有后期流体特效；观众看到的「喷」来自 03:26 那处补拍的角度。</div>
+
+      <h3>二、时间线：从 50 号到 56 号的节奏变化</h3>
+      <ul class="timeline">
+        <li><time datetime="2026-10-26">10 月 26 日</time>50 号拆成 A/B 双版本，片尾黑场 11 秒，观众评价分成两派。</li>
+        <li><time datetime="2026-10-30">10 月 30 日</time>56 号正片上线，片尾黑场只有 2 秒，节奏更紧。</li>
+        <li><time datetime="2026-10-31">10 月 31 日</time>56 号幕后发布，交代三盏灯与反光板顺序，片长 3 分 02 秒。</li>
+        <li><time datetime="2026-11-06">11 月 6 日</time>56-B 说明页更新，片尾黑场延长到 13 秒，配乐替换。</li>
+      </ul>
+      <p>从 50 到 56，黑场长度走了「11 秒—2 秒—13 秒」的折线。创作者在 56-B 说明里写「片尾需要留给水声」，这是对 50 号批评的直接回应，而非统一的美学选择。</p>
+
+      <h3>三、争议拆解：事实、回应、转述、推测</h3>
+      <ul class="fact-check">
+        <li><b>事实</b><span>56-B 总时长 4 分 49 秒，比 A 版多 11 秒，差值全部在片尾黑场。</span></li>
+        <li><b>回应</b><span>创作者 11 月 6 日说明页写「片尾留给水声」，未提画面升级。</span></li>
+        <li><b>转述</b><span>有观众称 56 号「喷水更猛」，来自 03:26 补拍角度，不是水量变化。</span></li>
+        <li><b>推测</b><span>低频铺底可能是为压住现场风噪，现场录音里 02:40 有明显风声。</span></li>
+      </ul>
+
+      <h3>四、可被反驳的具体判断</h3>
+      <p>判断一：56 号的价值在节奏控制，不在视觉奇观。支持证据是机位数量未变、补拍只延长 1.4 秒；可反驳的角度是——节奏变化本身就要靠画面重剪实现，二者难以切开。</p>
+      <p>判断二：观众对黑场的容忍度低于对配乐的容忍度。50 号 B 版的黑场被吐槽 200 余条，56-B 黑场 13 秒却少见批评，差别在于 56-B 黑场里保留了水声。这个判断只在两条条目上成立，扩大到全系列不稳。</p>
+    </section>
+
+    <!-- 体验指南 -->
+    <section class="panel" id="guide" aria-labelledby="guide-h">
+      <div class="panel-head">
+        <h2 id="guide-h">体验指南：按顺序核对的四步</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>先看正片，别看合集剪辑</h3>
+            <p>56 号正片 4 分 38 秒，合集剪辑把 19、41、56 三段拼在一起，片尾说明被截断，容易误判版本。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>对照版本说明页，只看差异段</h3>
+            <p>56-A 与 56-B 前 03:51 一致，直接跳到片尾看黑场与配乐，比从头看两遍省 7 分钟。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>幕后花絮单独看，不串进正片时间轴</h3>
+            <p>10 月 31 日的幕后 3 分 02 秒是拍摄现场记录，与正片不是同一时间线，混看会误认灯位顺序。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>核对平台与日期，再引用观众说法</h3>
+            <p>同一条目在站内与短视频平台的评论数不同，引用时标清平台与日期，避免把 50 号的批评安到 56 号上。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section class="panel" id="faq" aria-labelledby="faq-h">
+      <div class="panel-head">
+        <h2 id="faq-h">常见问题</h2>
+      </div>
+      <details>
+        <summary>56 号正片和 56-B 是同一条吗？</summary>
+        <p>不是同一条记录。56 号正片指 10 月 30 日发布的 4 分 38 秒版本；56-B 是 11 月 6 日更新说明的调整版，片长 4 分 49 秒，片尾黑场 13 秒，配乐替换为低频铺底。</p>
+      </details>
+      <details>
+        <summary>「会喷水」在片中是特效吗？</summary>
+        <p>拍摄记录显示为实拍水花加反光板补光，没有后期流体特效。观众所说的「喷」主要来自 03:26 补拍镜头的角度与水压。</p>
+      </details>
+      <details>
+        <summary>50 号和 56 号片尾黑场为什么差这么多？</summary>
+        <p>50-B 黑场 11 秒、56-A 黑场 2 秒、56-B 黑场 13 秒。56-B 说明页写「片尾留给水声」，属于对 50 号片尾批评的回应，不是统一规格。</p>
+      </details>
+      <details>
+        <summary>版本差异对照频道里有几条？</summary>
+        <p>目前 7 条：07、12、19、23、41、50、56。其中 50 与 56 是完整双版本，07、12、19、23 只有片尾或配乐单点差异。</p>
+      </details>
+      <details>
+        <summary>未剪辑素材能不能当正片看？</summary>
+        <p>不建议。未剪辑素材没有片头说明与时间码，灯位顺序也与正片不同，容易被当成「另一个版本」。它单独归在未剪辑素材频道。</p>
+      </details>
+      <details>
+        <summary>观众评论里说的「水量变大」有依据吗？</summary>
+        <p>没有水量记录。可核对的是 03:26 补拍角度变化与反光板位置调整。把角度变化说成水量变化，属于转述偏差。</p>
+      </details>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="panel" id="reviews" aria-labelledby="reviews-h">
+      <div class="panel-head">
+        <h2 id="reviews-h">观众评论：三种不同语气</h2>
+      </div>
+      <div class="comment">
+        <div class="comment-head"><b>@岸边数浪</b><span class="rate">★★★★☆</span><span>2026-11-07</span></div>
+        <p>56-B 片尾那 13 秒黑场留水声，我反复听了三遍。比 50-B 的纯黑场有诚意，至少说明知道观众在意什么。</p>
+      </div>
+      <div class="comment neutral">
+        <div class="comment-head"><b>@慢速回放党</b><span class="rate">★★★☆☆</span><span>2026-11-06</span></div>
+        <p>03:26 那个补拍角度确实好看，但整条节奏前紧后松，01:52 延长 1.4 秒几乎感觉不到。机位没变这点我认同，说「画面升级」的可以歇了。</p>
+      </div>
+      <div class="comment crit">
+        <div class="comment-head"><b>@灯位记录员</b><span class="rate">★★☆☆☆</span><span>2026-11-05</span></div>
+        <p>幕后 3 分 02 秒里，轮廓灯和反光板的顺序讲反了。现场录音 01:18 处能听到主灯先开，说明页却写轮廓灯先行，这种错不该出现在版本说明里。</p>
+      </div>
+      <div class="comment">
+        <div class="comment-head"><b>@编号收藏夹</b><span class="rate">★★★★★</span><span>2026-11-03</span></div>
+        <p>把 07 到 56 的版本差异做成对照表挺实用。41-C 把俯拍侧拍剪一起反而变慢，这条结论我同意，看了两遍都是这个感觉。</p>
+      </div>
+      <div class="comment neutral">
+        <div class="comment-head"><b>@路过看水花</b><span class="rate">★★★☆☆</span><span>2026-11-01</span></div>
+        <p>只看了 56 号正片，没看幕后。单看正片其实一般，水花镜头不到 20 秒。可能我期待的是整条都在水里的那种。</p>
+      </div>
+      <div class="comment crit">
+        <div class="comment-head"><b>@配乐替换观察</b><span class="rate">★★☆☆☆</span><span>2026-10-29</span></div>
+        <p>50-B 的低频铺底压得太满，现场水声几乎听不见。56-B 又换成留白，两头都走极端，中间值在哪没试过。</p>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="panel" id="news" aria-labelledby="news-h">
+      <div class="panel-head">
+        <h2 id="news-h">相关资讯</h2>
+      </div>
+      <ul class="news-list">
+        <li><a href="/#picked">56 号索引补记上线</a><span class="src">站内档案 · 2026-11-06</span><p>补入 56-B 剪辑说明、3 处补拍时间点与片尾黑场逐帧记录。</p></li>
+        <li><a href="/#picked">50 号双版本对照完成</a><span class="src">站内档案 · 2026-10-26</span><p>50-A 与 50-B 的配乐差异、片尾黑场 11 秒逐帧说明同步补入。</p></li>
+        <li><a href="/#analysis">41 号机位高度记录修正</a><span class="src">站内档案 · 2026-10-27</span><p>俯拍机位高度原记 1.8 米，按现场照片与幕后录音修正为 2.1 米。</p></li>
+        <li><a href="/#reviews">观众对 56-B 片尾的反馈整理</a><span class="src">评论归档 · 2026-11-07</span><p>共整理 38 条反馈，黑场留水声获正面评价，配乐低频铺底争议较大。</p></li>
+        <li><a href="/#faq">「会喷水」是否为特效的核对</a><span class="src">问答归档 · 2026-11-04</span><p>按拍摄现场记录核对，实拍水花加反光板，无后期流体特效。</p></li>
+      </ul>
+    </section>
+
+    <!-- 相关推荐 -->
+    <section class="panel" id="reco" aria-labelledby="reco-h">
+      <div class="panel-head">
+        <h2 id="reco-h">相关推荐</h2>
+      </div>
+      <div class="reco">
+        <a href="/#analysis">56号版本差异逐段对照</a>
+        <a href="/#picked">水下镜头花絮合集</a>
+        <a href="/#guide">慢速回放怎么看</a>
+        <a href="/#picked">片尾配乐改动记录</a>
+        <a href="/#faq">实拍水花与反光板补光</a>
+        <a href="/#reviews">50-B 黑场 11 秒评价</a>
+        <a href="/#channels">机位拆解频道入口</a>
+        <a href="/#updates">本周新增版本记录</a>
+      </div>
+    </section>
+
+    <!-- 补充板块：榜单 -->
+    <section class="panel" id="rank" aria-labelledby="rank-h">
+      <div class="panel-head">
+        <h2 id="rank-h">条目榜单：按版本差异完整度排</h2>
+      </div>
+      <ol class="rank">
+        <li><a href="/#analysis">56 号 · 正片与 56-B 完整双版本</a><span class="score">差异 5 项</span></li>
+        <li><a href="/#picked">50 号 · 50-A 与 50-B 配乐对照</a><span class="score">差异 4 项</span></li>
+        <li><a href="/#picked">41 号 · 俯拍与侧拍机位记录</a><span class="score">差异 3 项</span></li>
+        <li><a href="/#channels">23 号 · 片尾配乐单点差异</a><span class="score">差异 2 项</span></li>
+        <li><a href="/#channels">19 号 · 42 秒短版与长版</a><span class="score">差异 2 项</span></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside class="side-col" aria-label="侧栏导航与快捷索引">
+    <div class="side-card side-nav" id="sideNav">
+      <h3>栏目索引</h3>
+      <ul>
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picked">精选内容推荐</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#analysis">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#reviews">观众评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#reco">相关推荐</a></li>
+        <li><a href="/#rank">条目榜单</a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h3>本周核对要点</h3>
+      <div class="mini-item"><span class="k">11-06</span><a href="/#analysis">56-B 片尾黑场 13 秒</a></div>
+      <div class="mini-item"><span class="k">11-02</span><a href="/#picked">50-B 黑场逐帧说明</a></div>
+      <div class="mini-item"><span class="k">10-31</span><a href="/#picked">56 号幕后 3 分 02 秒</a></div>
+      <div class="mini-item"><span class="k">10-27</span><a href="/#analysis">41 号机位高度修正</a></div>
+    </div>
+    <div class="side-card">
+      <h3>标签快查</h3>
+      <div class="reco">
+        <a href="/#picked">正片</a>
+        <a href="/#picked">幕后</a>
+        <a href="/#picked">版本对照</a>
+        <a href="/#picked">机位拆解</a>
+        <a href="/#picked">配乐改动</a>
+        <a href="/#picked">未剪辑素材</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#124a6d"/>
+            <path d="M11 41c8-15 15-15 19 0 4-15 11-15 19 0" fill="none" stroke="#4fd1c5" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="32" cy="17" r="5" fill="#ffd166"/>
+          </svg>
+          <span>海角原创56会喷水</span>
+        </div>
+        <p>按发布批次、剪辑版本和现场记录整理条目，标注时长、机位与改动时间点，方便逐条核对。</p>
+      </div>
+      <div>
+        <h4>内容频道</h4>
+        <a href="/#picked">实拍短剧</a>
+        <a href="/#picked">水下镜头花絮</a>
+        <a href="/#picked">版本差异对照</a>
+        <a href="/#picked">幕后灯位记录</a>
+        <a href="/#picked">机位拆解</a>
+      </div>
+      <div>
+        <h4>阅读入口</h4>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#reviews">观众评论</a>
+        <a href="/#rank">条目榜单</a>
+      </div>
+      <div>
+        <h4>核对说明</h4>
+        <p>条目编号、时长、日期与版本差异为示例整理，平台评论数会随归档时间变化。索引核对日：2026-11-08。</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本站内容为原创系列档案整理，条目信息以创作者发布记录为准。</span>
+      <span>© 2026 海角原创56会喷水 索引档案</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  // 移动端菜单
+  var menuBtn=document.getElementById('menuBtn');
+  var mainNav=document.getElementById('mainNav');
+  if(menuBtn&&mainNav){
+    menuBtn.addEventListener('click',function(){
+      var open=mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+      menuBtn.textContent=open?'收起':'菜单';
+    });
+    mainNav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.matchMedia('(max-width:980px)').matches){
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent='菜单';
+      }
+    });
+  }
+
+  // 本地查找
+  var input=document.getElementById('searchInput');
+  var fb=document.getElementById('searchFeedback');
+  var searchables=[];
+  document.querySelectorAll('main h2, main h3, main .card, main li, main summary, .side-card .mini-item').forEach(function(el){
+    var t=el.textContent.replace(/\s+/g,' ').trim();
+    if(t) searchables.push({el:el,text:t.toLowerCase()});
+  });
+  function clearMarks(){
+    document.querySelectorAll('[data-search-hit]').forEach(function(el){
+      el.style.outline='';el.style.outlineOffset='';el.removeAttribute('data-search-hit');
+    });
+  }
+  if(input){
+    input.addEventListener('input',function(){
+      var q=input.value.trim().toLowerCase();
+      clearMarks();
+      if(!q){fb.style.display='none';return;}
+      var hits=searchables.filter(function(s){return s.text.indexOf(q)>-1;});
+      if(hits.length===0){
+        fb.textContent='没有匹配「'+input.value.trim()+'」的条目';
+        fb.style.display='block';
+        return;
+      }
+      fb.style.display='none';
+      hits.slice(0,8).forEach(function(h){
+        h.el.style.outline='2px solid #d9603f';
+        h.el.style.outlineOffset='2px';
+        h.el.setAttribute('data-search-hit','1');
+      });
+      if(hits[0].el.scrollIntoView){hits[0].el.scrollIntoView({behavior:'smooth',block:'center'});}
+    });
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){input.value='';clearMarks();fb.style.display='none';}
+    });
+  }
+
+  // 回到顶部
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>560){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+    highlightNav();
+  }
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  // 侧栏滚动高亮
+  var navLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=navLinks.map(function(a){
+    var id=a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  });
+  function highlightNav(){
+    var pos=window.scrollY+(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sticky-h'))||104)+40;
+    var current=-1;
+    targets.forEach(function(t,i){if(t&&t.offsetTop<=pos)current=i;});
+    navLinks.forEach(function(a,i){a.classList.toggle('active',i===current);});
+  }
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"海角原创56会喷水",
+  "description":"围绕原创系列《会喷水》的条目索引、版本差异、幕后记录与观众反馈整理。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"56 号正片和 56-B 是同一条吗？","acceptedAnswer":{"@type":"Answer","text":"不是。56 号正片是 10 月 30 日发布的 4 分 38 秒版本；56-B 是 11 月 6 日更新说明的调整版，片长 4 分 49 秒，片尾黑场 13 秒，配乐替换为低频铺底。"}},
+    {"@type":"Question","name":"「会喷水」在片中是特效吗？","acceptedAnswer":{"@type":"Answer","text":"拍摄记录显示为实拍水花加反光板补光，没有后期流体特效。观众所说的「喷」主要来自 03:26 补拍镜头的角度与水压。"}},
+    {"@type":"Question","name":"50 号和 56 号片尾黑场为什么差这么多？","acceptedAnswer":{"@type":"Answer","text":"50-B 黑场 11 秒、56-A 黑场 2 秒、56-B 黑场 13 秒。56-B 说明页写「片尾留给水声」，属于对 50 号片尾批评的回应，不是统一规格。"}},
+    {"@type":"Question","name":"版本差异对照频道里有几条？","acceptedAnswer":{"@type":"Answer","text":"目前 7 条：07、12、19、23、41、50、56。其中 50 与 56 是完整双版本，其余为片尾或配乐单点差异。"}},
+    {"@type":"Question","name":"观众评论里说的「水量变大」有依据吗？","acceptedAnswer":{"@type":"Answer","text":"没有水量记录。可核对的是 03:26 补拍角度变化与反光板位置调整。把角度变化说成水量变化，属于转述偏差。"}}
+  ]
+}
+</script>
+</body>
+</html>
